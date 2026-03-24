@@ -39,7 +39,11 @@ export default class Main extends Component {
             exact
             render={(props) =>
               settings.isSplash ? (
-                <Splash {...props} theme={this.props.theme} />
+                <Splash
+                  key={`root-splash-${props.location.pathname}${props.location.search}${props.location.hash}`}
+                  {...props}
+                  theme={this.props.theme}
+                />
               ) : (
                 <Home {...props} theme={this.props.theme} />
               )
@@ -76,7 +80,13 @@ export default class Main extends Component {
           {settings.isSplash && (
             <Route
               path="/splash"
-              render={(props) => <Splash {...props} theme={this.props.theme} />}
+              render={(props) => (
+                <Splash
+                  key={`splash-${props.location.pathname}${props.location.search}${props.location.hash}`}
+                  {...props}
+                  theme={this.props.theme}
+                />
+              )}
             />
           )}
 
@@ -86,7 +96,9 @@ export default class Main extends Component {
           />
           <Route
             path="/resume"
-            render={(props) => <ResumePage {...props} theme={this.props.theme} />}
+            render={(props) => (
+              <ResumePage {...props} theme={this.props.theme} />
+            )}
           />
           <Route
             path="*"

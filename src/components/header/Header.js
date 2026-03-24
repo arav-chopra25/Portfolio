@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./Header.css";
 import { Fade } from "react-reveal";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink, Link, withRouter } from "react-router-dom";
 import { greeting, settings } from "../../portfolio.js";
 import SeoHeader from "../seoHeader/SeoHeader";
 
@@ -16,6 +16,27 @@ const onMouseOut = (event) => {
 };
 
 class Header extends Component {
+  handleLogoClick = (event) => {
+    if (!settings.isSplash) {
+      return;
+    }
+
+    event.preventDefault();
+    const playId = `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
+    const splashPath = `/splash?play=${playId}`;
+
+    // Prefer SPA navigation, but force a hard navigation if routing doesn't update.
+    this.props.history.push(splashPath);
+    window.setTimeout(() => {
+      if (
+        this.props.location.pathname !== "/splash" ||
+        this.props.location.search.indexOf(playId) === -1
+      ) {
+        window.location.assign(splashPath);
+      }
+    }, 0);
+  };
+
   render() {
     const theme = this.props.theme;
     const link = settings.isSplash ? "/splash" : "home";
@@ -24,7 +45,12 @@ class Header extends Component {
         <SeoHeader />
         <div>
           <header className="header">
-            <NavLink to={link} tag={Link} className="logo">
+            <NavLink
+              to={link}
+              tag={Link}
+              className="logo"
+              onClick={this.handleLogoClick}
+            >
               <span style={{ color: theme.text }}> &lt;</span>
               <span className="logo-name" style={{ color: theme.text }}>
                 {greeting.logo_name}
@@ -115,4 +141,4 @@ class Header extends Component {
     );
   }
 }
-export default Header;
+export default withRouter(Header);

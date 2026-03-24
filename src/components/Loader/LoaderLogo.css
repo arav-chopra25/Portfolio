@@ -1,4 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Graduate&display=swap");
+
 .raw_logo {
   height: 305;
   width: 440;
+}
+
+.raw_logo .letter,
+.raw_logo .signature1,
+.raw_logo .signature2,
+.raw_logo .signature3,
+.raw_logo .signature4,
+.raw_logo .signature5,
+.raw_logo .signature6,
+.raw_logo .signature7,
+.raw_logo .signature8,
+.raw_logo .signature9,
+.raw_logo .signature10,
+.raw_logo .signature11,
+.raw_logo .signature12,
+.raw_logo .signature13,
+.raw_logo .signature14,
+.raw_logo .signature15 {
+  display: none;
+}
+
+.raw_logo .initials {
+  font-family: "Graduate", "Times New Roman", serif;
+  font-size: 50px;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+.raw_logo .loader-name {
+  font-family: "Agustina Regular", "Segoe Script", "Brush Script MT", cursive;
+  font-size: 52px;
+  font-weight: bold;
+  fill: none;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  opacity: 1;
+}
+
+.raw_logo .loader-name-first {
+  stroke-dasharray: 700;
+  stroke-dashoffset: 700;
+  -webkit-animation: draw-name 1.32s linear forwards;
+  -o-animation: draw-name 1.32s linear forwards;
+  -moz-animation: draw-name 1.32s linear forwards;
+  animation: draw-name 1.32s linear forwards;
+}
+
+.raw_logo .loader-name-last {
+  stroke-dasharray: 1100;
+  stroke-dashoffset: 1100;
+  -webkit-animation: draw-name 1.44s linear forwards;
+  -o-animation: draw-name 1.44s linear forwards;
+  -moz-animation: draw-name 1.44s linear forwards;
+  animation: draw-name 1.44s linear forwards;
+}
+
+@-webkit-keyframes draw-name {
+  from {
+    stroke-dashoffset: 1100;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes draw-name {
+  from {
+    stroke-dashoffset: 1100;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
 }
