@@ -21,9 +21,9 @@ const seo = {
 const greeting = {
   title: "Arav Chopra",
   logo_name: "Arav Chopra",
-  nickname: "aravchopra",
+  nickname: "AI & ML Engineer",
   subTitle:
-    "A passionate individual who always thrives to work on end to end products which develop sustainable and scalable social and technical systems to create impact.",
+    "AI/ML Developer | Problem Solver | Building scalable tech solutions",
   resumeLink:
     "https://drive.google.com/file/d/1bXRknv_h-XI_3CQ3SGPteGODtvEb7YvI/view?usp=sharing",
   portfolio_repository: "https://github.com/aravchopra/masterPortfolio",
