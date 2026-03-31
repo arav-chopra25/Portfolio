@@ -384,9 +384,18 @@ const certifications = {
       title: "English Communication Program",
       subtitle: "- Unacademy",
       logo_path: "Unacademy-Symbol.png",
-      certificate_link: "/certificates/Participation-Certificate.pdf",
+      certificate_link:
+        "/certificates/English-Communication-Certificate-Actual.pdf",
       alt_name: "Unacademy",
-      color_code: "#3B7DDD",
+      color_code: "#FFFFFF",
+    },
+    {
+      title: "Certificate of Participation - DevJams",
+      subtitle: "- graVITas'25, VIT Vellore",
+      logo_path: "GDSC_Logo_White_Background_0.png",
+      certificate_link: "/certificates/DevJams-Certificate.pdf",
+      alt_name: "GDSC VIT Vellore",
+      color_code: "#FFFFFF",
     },
   ],
 };
