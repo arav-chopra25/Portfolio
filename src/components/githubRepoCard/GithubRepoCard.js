@@ -9,6 +9,13 @@ export default function GithubRepoCard({ repo, theme }) {
     win.focus();
   }
 
+  function formatDateDDMMYYYY(dateString) {
+    const isoDate = (dateString || "").split("T")[0];
+    const parts = isoDate.split("-");
+    if (parts.length !== 3) return isoDate;
+    return `${parts[2]}-${parts[1]}-${parts[0]}`;
+  }
+
   return (
     <div className="repo-card-div" style={{ backgroundColor: theme.highlight }}>
       <Fade bottom duration={2000} distance="40px">
@@ -39,7 +46,7 @@ export default function GithubRepoCard({ repo, theme }) {
               className="repo-creation-date subTitle"
               style={{ color: theme.secondaryText }}
             >
-              Created on {repo.createdAt.split("T")[0]}
+              Created on {formatDateDDMMYYYY(repo.createdAt)}
             </p>
             <ProjectLanguages
               className="repo-languages"
