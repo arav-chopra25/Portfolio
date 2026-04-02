@@ -5,8 +5,6 @@ import { Fade } from "react-reveal";
 import "./Resume.css";
 import myResumePdf from "../../assets/docs/Arav_Chopra_Resume_ML.pdf";
 import { Document, Page, pdfjs } from "react-pdf";
-import Button from "../../components/button/Button";
-import { greeting } from "../../portfolio";
 import TopButton from "../../components/topButton/TopButton";
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
@@ -85,16 +83,6 @@ export default class ResumePage extends Component {
         <div className="resume-view">
           <Fade bottom duration={2000} distance="40px">
             <div>
-              {/* Download Button */}
-              <div className="download-btn">
-                <Button
-                  text="📃 Download Resume"
-                  newTab={true}
-                  href={greeting.resumeLink}
-                  theme={theme}
-                />
-              </div>
-
               {/* Loading State */}
               {isLoading && !error && (
                 <div className="resume-loading">
