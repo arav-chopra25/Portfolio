@@ -393,7 +393,7 @@ const certifications = {
       title: "Certificate of Participation - DevJams",
       subtitle: "- graVITas'25, VIT Vellore",
       logo_path: "GDSC_Logo_White_Background_0.png",
-      certificate_link: "/certificates/DevJams-Certificate-Actual.pdf",
+      certificate_link: "/certificates/DevJams-Certificate.pdf",
       alt_name: "GDSC VIT Vellore",
       color_code: "#FFFFFF",
     },
