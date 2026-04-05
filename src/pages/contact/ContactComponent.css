@@ -60,6 +60,18 @@
   height: auto;
 }
 
+.contact-profile-image {
+  width: 420px;
+  max-width: 90%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center 16%;
+  margin-top: 40px;
+  border-radius: 50%;
+  border: 5px solid #1f1f1f;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
+}
+
 .blog-heading-img-div > * {
   max-width: 100%;
   height: auto;
@@ -182,6 +194,10 @@
     margin-right: 0px;
     line-height: normal;
     text-align: center;
+  }
+
+  .contact-profile-image {
+    width: 300px;
   }
 
   .blog-header-detail-text {
